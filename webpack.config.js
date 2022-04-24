@@ -34,9 +34,11 @@ const config = {
     new HtmlWebpackPlugin({
       template: "index.html",
     }),
+    
     new MiniCssExtractPlugin({
       filename: "css/[name].css",
     }),
+
     new CleanWebpackPlugin({
       cleanStaleWebpackAssets: isProduction,
     }),
