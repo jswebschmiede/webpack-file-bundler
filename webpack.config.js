@@ -22,7 +22,7 @@ const config = {
     path: BUILD_DIR,
     filename: "js/[name].bundle.js",
   },
-  devtool: "inline-source-map",
+  devtool: isProduction ? "nosources-source-map" : "eval-cheap-source-map",
   optimization: {
     minimize: true,
     minimizer: ["...", new TerserPlugin(), new CssMinimizerPlugin()],
