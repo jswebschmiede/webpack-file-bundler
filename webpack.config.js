@@ -24,7 +24,7 @@ const config = {
   },
   devtool: isProduction ? "nosources-source-map" : "source-map",
   optimization: {
-    minimize: true,
+    minimize: isProduction,
     minimizer: ["...", new TerserPlugin(), new CssMinimizerPlugin()],
   },
   watchOptions: {
